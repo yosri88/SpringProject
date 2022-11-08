@@ -66,7 +66,6 @@ public class ProduitServiceImplTest {
       Produit sa = new Produit();
       sa.setDateCreation(date1);
       sa.setDateDerniereModification(date2);
-      l.info("produit \n "+p);
 
       Produit savedProduit= produitService.addProduit(p);
       l.info("size1 "+Produits.size());
