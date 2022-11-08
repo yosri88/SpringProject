@@ -30,7 +30,9 @@ public class ProduitServiceImplTest {
          SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
          Date date11 = dateFormat.parse("30/09/2000");
          Date date12 = dateFormat.parse("30/09/2010");
-         Produit sa = new Produit(date11, date12);
+         Produit sa = new Produit();
+         sa.setDateCreation(date11);
+         sa.setDateDerniereModification(date12);
          Produit savedProduit = produitService.addProduit(sa);
          l.info(" Produit : " + sa);
 
@@ -61,7 +63,9 @@ public class ProduitServiceImplTest {
       SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
       Date date1 = dateFormat.parse("10/02/2020");
       Date date2 = dateFormat.parse("12/09/2022");
-      Produit p = new Produit(date1, date2);
+      Produit sa = new Produit();
+      sa.setDateCreation(date1);
+      sa.setDateDerniereModification(date2);
       l.info("produit \n "+p);
 
       Produit savedProduit= produitService.addProduit(p);
