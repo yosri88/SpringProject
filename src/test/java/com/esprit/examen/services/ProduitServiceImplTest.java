@@ -1,19 +1,20 @@
 package com.esprit.examen.services;
 
-import com.esprit.examen.entities.Produit;
 import java.text.ParseException;
-
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
-import static org.junit.Assert.*;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import static org.junit.Assert.assertNotNull;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
+
+import com.esprit.examen.entities.Produit;
 
 
 @RunWith(SpringRunner.class)
@@ -67,7 +68,7 @@ public class ProduitServiceImplTest {
       sa.setDateCreation(date1);
       sa.setDateDerniereModification(date2);
 
-      Produit savedProduit= produitService.addProduit(p);
+      Produit savedProduit= produitService.addProduit(sa);
       l.info("size1 "+Produits.size());
       System.out.print("size1 "+Produits.size());
       produitService.deleteProduit(savedProduit.getIdProduit());
