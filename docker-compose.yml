@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mysqldb
-    image:  aymenbenhassine/devops-aymen
+    image:  yosrimtar/devops-spring
     container_name: springboot-app
     restart: on-failure
     env_file: ./.env
