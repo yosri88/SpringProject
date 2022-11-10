@@ -118,7 +118,7 @@
 	<distributionManagement>
 		<repository>
 			<id>deploymentRepo</id>
-			<name>Nexus Repository</name>
+			<name>sonatype/nexus3</name>
 			<url>http://197.27.126.59/:8081/repository/maven-releases/</url>
 		</repository>
 	</distributionManagement>
